@@ -15,9 +15,9 @@ crl_dir		= $dir			# Where the issued crl are kept
 database	= $dir/index.txt	# database index file.
 new_certs_dir	= $dir/certs_by_serial	# default place for new certs.
 
-certificate	= $dir/ca.crt	 	# The CA certificate
-serial		= $dir/serial 		# The current serial number
-crl		= $dir/crl.pem 		# The current CRL
+certificate	= $dir/ca.crt		# The CA certificate
+serial		= $dir/serial		# The current serial number
+crl		= $dir/crl.pem		# The current CRL
 private_key	= $dir/private/ca.key	# The private key
 RANDFILE	= $dir/.rand		# private random number file
 
@@ -30,7 +30,7 @@ crl_extensions	= crl_ext
 default_days	= $ENV::EASYRSA_CERT_EXPIRE	# how long to certify for
 default_crl_days= $ENV::EASYRSA_CRL_DAYS	# how long before next CRL
 default_md	= $ENV::EASYRSA_DIGEST		# use public key default MD
-preserve	= no			# keep passed DN ordering
+preserve	= no				# keep passed DN ordering
 
 # A few difference way of specifying how similar the request should look
 # For type CA, the listed attributes must be the same, and the optional
@@ -53,10 +53,10 @@ emailAddress		= optional
 # We key off $DN_MODE to determine how to format the DN
 [ req ]
 default_bits		= $ENV::EASYRSA_KEY_SIZE
-default_keyfile 	= privkey.pem
+default_keyfile		= privkey.pem
 default_md		= $ENV::EASYRSA_DIGEST
 distinguished_name	= $ENV::EASYRSA_DN
-x509_extensions		= easyrsa_ca	# The extentions to add to the self signed cert
+x509_extensions		= easyrsa_ca			# The extentions to add to the self signed cert
 
 # A placeholder to handle the $EXTRA_EXTS feature:
 #%EXTRA_EXTS%	# Do NOT remove or change this line as $EXTRA_EXTS support requires it
